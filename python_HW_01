@@ -1,1 +1,52 @@
+#exercise 1:
+"""
+1. We’ve seen thatn = 42is legal. What about42 = n?
+A: 42=n SyntaxError: can't assign to literal
+"""
+#2.How aboutx = y = 1?
+# it can run
+x=y=1
+print(x+y)#2
+print(x*y)#1
 
+#3. n some languages every statement ends with a semi-colon,;. What happens if you put a semi-colon at the end of a Python statement?
+# ; can run and its meaning just like it is used in C++
+print(10);print(20)
+
+"""
+4. What if you put a period at the end of a statement?
+A: print(50). SyntaxError: invalid syntax
+"""
+
+"""
+5. In math notation you can multiplyxandylike this:x y. What happens if you try that in Python?
+A: print(xy) name 'xy' is not defined
+"""
+
+#exercise 2
+#1. The volume of a sphere with radiusris4/3 πr3. What is the volume of a sphere with radius 5?
+import math
+print((math.pow(5,3))*4/3*math.pi)
+print((5**3)*4/3*math.pi)
+
+#A:
+#523.5987755982989
+#523.5987755982989
+
+#2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount. Shipping costs $3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for 60 copies?
+price_book=24.95*0.6;
+first_copy=3
+add_copy=0.75
+total_amount=(price_book+add_copy)*60+first_copy-add_copy;
+print(round(total_amount,2))
+#A: 945.45
+
+#3.If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
+easy_pace=8*60+15
+another_pace=7*60+12
+total_sec=easy_pace*2+another_pace*3
+sec=total_sec%60;
+min=(((total_sec)//60)+52)%60
+hour=((total_sec)//60+52)//60+6
+print(hour,":",min,":",sec,"am")
+#A: 7 : 30 : 6 am
